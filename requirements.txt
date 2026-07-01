@@ -1,2 +1,5 @@
+playwright
+pytest
+python-dotenv
 pytest-playwright
 pytest-html
