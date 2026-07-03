@@ -1,5 +1,7 @@
+pytest-metadata
 playwright
 pytest
 python-dotenv
 pytest-playwright
 pytest-html
+allure-pytest

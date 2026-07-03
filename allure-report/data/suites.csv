@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"To test the valid and invalid scenario","930","Login Test","tests","2026-07-03","passed","2026-07-03","","test_login","",""
+"To test the valid and invalid scenario","873","Login Test","tests","2026-07-03","passed","2026-07-03","","test_login","",""
+"To test the valid and invalid scenario","981","Login Test","tests","2026-07-03","passed","2026-07-03","","test_login","",""
+"To test the valid and invalid scenario","856","Login Test","tests","2026-07-03","passed","2026-07-03","","test_login","",""
