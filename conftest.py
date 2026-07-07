@@ -13,10 +13,30 @@ def pytest_configure(config):
     config.stash[metadata_key]["Browser"] ="Chrome"
     config.stash[metadata_key]["Tester"] ="Leema"
 
-@pytest.fixture
-def page():  # name of the fixture
+# def pytest_addoption(parser):
+#     parser.addoption(  # method that registers a new command-line option
+#         "--browser-name",
+#         action="store",  # store the value the user is passing
+#         default="chrome", # if the user does not specify the --browser option, pytest automatically uses chrome
+#         help="Browser to run tests on"  # Description
+#     )
+
+@pytest.fixture(params=["chromium","firefox","webkit"])
+def page(request):  # name of the fixture
+    browser_name = request.config.getoption("--browser")
+
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)  # headless
+
+        if browser_name == "chromium":
+            browser = p.chromium.launch(headless=False)  # headless
+        elif browser_name == "firefox":
+            browser = p.firefox.launch(headless=False)
+        elif browser_name == "webkit":
+            browser = p.webkit.launch(headless=False)
+
+        else:
+            browser = p.chromium.launch(headless=False)
+
         context = browser.new_context(record_video_dir="Videos/")
 
         context.tracing.start(
