@@ -1,3 +1,5 @@
+allure-python-commons
+pillow
 pytest-metadata
 playwright
 pytest
@@ -5,3 +7,5 @@ python-dotenv
 pytest-playwright
 pytest-html
 allure-pytest
+openpyxl
+requests
