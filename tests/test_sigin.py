@@ -8,4 +8,4 @@ from pages.login_page import LoginPage
 def test_login(page):
 
     obj = LoginPage(page)  # class constructor , create the object for the class
-    obj.login("testuser","testuser")  # using the object we are calling the method
+    obj.login("testuser","testuser123")  # using the object we are calling the method
